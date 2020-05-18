@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Covid-19 Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="covid.js"></script>
+  </head>
+  <body onload="details()">
+     <!--invoking the details() function on rendering the content -->
+    <div class="header">
+        <h1>Covid-19 Tracker</h1>
+      <h3>Are you worried of whether it is safer to go to a particular palce?</h3>
+    </div>
+    <div class="sub-header">
+        <h2>"Prevention is Better than Cure"</h2>
+      <h3>Stay Indoors Stay Safe.</h3>
+    </div>
+    <div class="main">
+        <!--Getting the state and district details-->
+      <form name="covid" class="covid">
+        <div class="input-text">
+            <input type="text" name="state" placeholder="STATE NAME" />
+            <input type="text" name="district" placeholder="DISTRICT NAME" />
+        </div>
+        <!--invoking the getvalue() function by clicking the button -->
+        <input
+          type="button"
+          onclick="getValue()"
+          value="Submit"
+        />
+      </form>
+    </div>
+    <div class="detals">
+      <p id="res"></p>
+      <p id="safe"></p>
+   </div>
+  </body>
+</html>
